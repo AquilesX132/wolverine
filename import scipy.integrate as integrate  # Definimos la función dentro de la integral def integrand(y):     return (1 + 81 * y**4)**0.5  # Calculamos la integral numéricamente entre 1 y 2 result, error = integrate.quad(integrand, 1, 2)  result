@@ -1,0 +1,10 @@
+import scipy.integrate as integrate
+
+# Definimos la función dentro de la integral
+def integrand(y):
+    return (1 + 81 * y**4)**0.5
+
+# Calculamos la integral numéricamente entre 1 y 2
+result, error = integrate.quad(integrand, 1, 2)
+
+result
